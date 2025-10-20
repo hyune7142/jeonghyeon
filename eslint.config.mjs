@@ -33,7 +33,7 @@ const eslintConfig = [
     },
     // 주요 규칙 설정
     rules: {
-      // ✅ Prettier 포맷팅 규칙 (코드 스타일 통일)
+      // Prettier 포맷팅 규칙 (코드 스타일 통일)
       'prettier/prettier': [
         'error',
         {
@@ -106,6 +106,7 @@ const eslintConfig = [
       'build/**', // 빌드 폴더
       'next-env.d.ts', // Next 자동 생성 타입
       'coverage/**', // 테스트 커버리지 결과
+      '**/*.config.ts', // 구성 파일
       '**/*.config.js', // 구성 파일
       '**/*.config.mjs', // 구성 파일
     ],
