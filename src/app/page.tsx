@@ -1,13 +1,17 @@
-import { H1 } from '@/components/common/Typography';
-
-import styles from './page.module.scss';
+import AboutMeSection from '@/components/sections/AboutMeSection';
+import IntroSection from '@/components/sections/IntroSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import SkillsSection from '@/components/sections/SkillsSection';
+import WorkExperience from '@/components/sections/WorkExperience';
 
 function Home() {
   return (
-    <div className={styles.container}>
-      <div>
-        <H1>Welcome to the JoengHyeon Portfolio</H1>
-      </div>
+    <div className="flex flex-col gap-4">
+      <IntroSection />
+      <AboutMeSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <WorkExperience />
     </div>
   );
 }

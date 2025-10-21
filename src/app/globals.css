@@ -130,7 +130,8 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+  html, body {
+    min-width: 320px;
     @apply bg-background text-foreground;
   }
 }

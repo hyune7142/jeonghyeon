@@ -25,8 +25,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
-      <body>
+    <html lang="ko" suppressHydrationWarning className="min-w-[320px]">
+      <body className="min-w-[320px]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -34,7 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="pt-[var(--header-height)] px-6">{children}</main>
+          <main className="pt-[var(--header-height)] px-6 ">{children}</main>
         </ThemeProvider>
       </body>
     </html>

@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   className?: string;
-  children: string;
+  children: React.ReactNode;
 }
 
 const H1: React.FC<Props> = ({ className, children }) => {
