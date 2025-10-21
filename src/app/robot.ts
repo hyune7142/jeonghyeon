@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
     rules: isProd
       ? [{ userAgent: '*', allow: '/', disallow: ['/admin'] }]
       : [{ userAgent: '*', disallow: '/' }],
-    sitemap: isProd ? 'https://loa-hub.com/sitemap.xml' : undefined,
+    sitemap: isProd ? 'https://jeonghyeon.com/sitemap.xml' : undefined,
   };
 }

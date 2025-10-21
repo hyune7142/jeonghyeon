@@ -1,5 +1,23 @@
 import { ReactNode } from 'react';
+
+import { Metadata, Viewport } from 'next';
+import { ThemeProvider } from 'next-themes';
+
+import Header from '@/components/common/Header';
 import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'JeongHyeon Portfolio',
+  description: 'JeongHyeon Portfolio',
+  authors: [{ name: 'JeongHyeon' }],
+  keywords: ['JeongHyeon', 'Hyune7142', 'Portfolio', 'Note'],
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+};
 
 export default function RootLayout({
   children,
@@ -7,19 +25,18 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <head>
-        <title>LoaHub</title>
-        <meta name="author" content="JeongHyeon" />
-        <meta name="description" content="LostArk Hub" />
-        <meta name="keywords" content="LostArk Utility, LoaHub" />
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        />
-      </head>
-      <body>{children}</body>
+    <html lang="ko" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="pt-[var(--header-height)] px-6">{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

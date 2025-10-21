@@ -1,12 +1,15 @@
-export default function Home() {
+import { H1 } from '@/components/common/Typography';
+
+import styles from './page.module.scss';
+
+function Home() {
   return (
-    <div className="grid items-center justify-items-center">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <p>Main</p>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <p>Footer</p>
-      </footer>
+    <div className={styles.container}>
+      <div>
+        <H1>Welcome to the JoengHyeon Portfolio</H1>
+      </div>
     </div>
   );
 }
+
+export default Home;
