@@ -23,9 +23,9 @@ function ProfileCard() {
           href="https://github.com/Hyune7142"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors"
+          className="text-foreground/80 hover:text-foreground flex items-center gap-2 text-sm font-semibold transition-colors"
         >
-          <Github className="w-5 h-5" />
+          <Github className="h-5 w-5" />
           GitHub
         </a>
       </CardFooter>

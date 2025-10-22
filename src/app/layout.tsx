@@ -34,7 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="pt-[var(--header-height)] px-6 ">{children}</main>
+          <main className="p-6 pt-[var(--header-height)]">{children}</main>
         </ThemeProvider>
       </body>
     </html>

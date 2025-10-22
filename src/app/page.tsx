@@ -6,7 +6,7 @@ import WorkExperience from '@/components/sections/WorkExperience';
 
 function Home() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-10">
       <IntroSection />
       <AboutMeSection />
       <SkillsSection />

@@ -46,7 +46,7 @@ const Blockquote: React.FC<Props> = ({ className, children }) => {
 const InlineCode: React.FC<Props> = ({ className, children }) => {
   return (
     <code
-      className={`relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold ${className}`}
+      className={`bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold ${className}`}
     >
       {children}
     </code>
@@ -54,7 +54,7 @@ const InlineCode: React.FC<Props> = ({ className, children }) => {
 };
 
 const Lead: React.FC<Props> = ({ className, children }) => {
-  return <p className={`text-xl text-muted-foreground ${className}`}>{children}</p>;
+  return <p className={`text-muted-foreground text-xl ${className}`}>{children}</p>;
 };
 
 const Large: React.FC<Props> = ({ className, children }) => {
@@ -62,7 +62,7 @@ const Large: React.FC<Props> = ({ className, children }) => {
 };
 
 const Muted: React.FC<Props> = ({ className, children }) => {
-  return <p className={`text-sm text-muted-foreground ${className}`}>{children}.</p>;
+  return <p className={`text-muted-foreground text-sm ${className}`}>{children}.</p>;
 };
 
 export { H1, H2, H3, H4, P, Lead, Large, Muted, Blockquote, InlineCode };
