@@ -158,8 +158,14 @@ export default function SkillSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
-  // ✅ 선택된 탭 중앙 정렬
+  const hasMounted = useRef(false);
+
   useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true;
+      return; // 🚫 첫 렌더에서는 실행하지 않음
+    }
+
     const activeButton = tabRefs.current[activeTab];
     if (activeButton) {
       activeButton.scrollIntoView({

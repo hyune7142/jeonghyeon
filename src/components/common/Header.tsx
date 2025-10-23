@@ -27,8 +27,8 @@ export default function Header() {
           <a href="#about" className="text-foreground/80 hover:text-foreground text-sm">
             About
           </a>
-          <a href="#work" className="text-foreground/80 hover:text-foreground text-sm">
-            Work
+          <a href="#skill" className="text-foreground/80 hover:text-foreground text-sm">
+            Skills
           </a>
           <a href="#project" className="text-foreground/80 hover:text-foreground text-sm">
             Project
@@ -55,8 +55,8 @@ export default function Header() {
             <Link href="#about" onClick={toggleMenu} className="hover:text-primary text-sm">
               About
             </Link>
-            <Link href="#work" onClick={toggleMenu} className="hover:text-primary text-sm">
-              Work
+            <Link href="#skill" onClick={toggleMenu} className="hover:text-primary text-sm">
+              Skills
             </Link>
             <Link href="#project" onClick={toggleMenu} className="hover:text-primary text-sm">
               Project

@@ -23,7 +23,7 @@ export default function Section({ sectionId, className, title, children }: Secti
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.3 }}
-      className={cn('flex scroll-mt-[80px] flex-col', className)}
+      className={cn('flex scroll-mt-[var(--header-height)] flex-col', className)}
     >
       {title && (
         <>

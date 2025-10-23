@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       spacing: {
-        header: '80px', // 헤더 높이
+        header: '70px', // 헤더 높이
       },
       fontFamily: {
         sans: ['var(--font-pretendard)', 'sans-serif'],
