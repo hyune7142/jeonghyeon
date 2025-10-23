@@ -15,7 +15,7 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="border-border/40 bg-background/80 fixed top-0 left-0 z-50 w-full border-b backdrop-blur-md transition-all">
+    <header className="border-border/40 bg-background/80 fixed top-0 left-0 z-50 w-full min-w-[320px] border-b backdrop-blur-md transition-all">
       <div className="mx-auto flex items-center justify-between px-6 py-4">
         {/* 로고 */}
         <Link href="/" className="text-foreground text-xl font-bold tracking-tight">

@@ -6,7 +6,7 @@ import ProfileCard from '@/components/profile/ProfileCard';
 
 function IntroSection() {
   return (
-    <Section id="project" className="sm:flex-row">
+    <Section sectionId="project" className="sm:flex-row">
       <div id="intro" className="flex-auto p-3 text-center md:text-left">
         <H1>Welcome</H1>
         <H1 className="text-blue-300">JoengHyeon Portfolio</H1>

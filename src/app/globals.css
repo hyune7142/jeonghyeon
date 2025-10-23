@@ -132,7 +132,7 @@
     @apply border-border outline-ring/50;
   }
   html, body {
-    min-width: 320px;
+    @apply min-w-[320px];
     @apply bg-background text-foreground;
     font-family: var(--font-pretendard), sans-serif;
     scroll-behavior: smooth;

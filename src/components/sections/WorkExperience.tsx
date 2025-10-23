@@ -6,7 +6,7 @@ import Section from '@/components/common/Section';
 
 function WorkExperience() {
   return (
-    <Section id="work" title="업무경력">
+    <Section sectionId="work" title="업무경력">
       <div>프로젝트</div>
     </Section>
   );

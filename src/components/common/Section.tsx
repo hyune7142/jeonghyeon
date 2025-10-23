@@ -9,21 +9,21 @@ import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 interface SectionProps {
-  id: string;
+  sectionId: string;
   title?: string;
   children?: ReactNode;
   className?: string;
 }
 
-export default function Section({ id, className, title, children }: SectionProps) {
+export default function Section({ sectionId, className, title, children }: SectionProps) {
   return (
     <motion.section
-      id={id}
+      id={sectionId}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.3 }}
-      className={cn('flex flex-col', className)}
+      className={cn('flex scroll-mt-[80px] flex-col', className)}
     >
       {title && (
         <>

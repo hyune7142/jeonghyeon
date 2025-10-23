@@ -34,8 +34,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning className={`${pretendard.variable} min-w-[320px]`}>
-      <body className="min-w-[320px]">
+    <html lang="ko" suppressHydrationWarning className={`${pretendard.variable}`}>
+      <body>
         <Providers>
           <Header />
           <main className="p-6 pt-[var(--header-height)]">{children}</main>

@@ -7,7 +7,7 @@ import { Lead } from '@/components/common/Typography';
 
 function AboutMeSection() {
   return (
-    <Section id="about" title="자기소개">
+    <Section sectionId="about" title="자기소개">
       <Lead className="whitespace-pre-line">
         {`안녕하세요.
           사용자 경험과 코드의 유지보수성을 최우선 가치로 두는 프론트엔드 개발자 이정현입니다.
