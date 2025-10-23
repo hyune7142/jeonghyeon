@@ -12,7 +12,21 @@ export const metadata: Metadata = {
   title: 'JeongHyeon Portfolio',
   description: 'JeongHyeon Portfolio',
   authors: [{ name: 'JeongHyeon' }],
-  keywords: ['JeongHyeon', 'Hyune7142', 'Portfolio', 'Note'],
+  keywords: [
+    '이정현',
+    'JeongHyeon',
+    'hyune7142',
+    '웹개발',
+    '프론트엔드',
+    '리액트',
+    '넥스트',
+    '자바스크립트',
+    '타입스크립트',
+    '리액트쿼리',
+    '주스탄드',
+    '스프링',
+    '포트폴리오',
+  ],
 };
 
 export const viewport: Viewport = {
@@ -35,10 +49,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning className={`${pretendard.variable}`}>
-      <body>
+      <body className="min-w-[320px]">
         <Providers>
           <Header />
-          <main className="p-6 pt-[var(--header-height)]">{children}</main>
+          <main className="min-w-[320px] p-6 pt-[var(--header-height)]">
+            <div className="mx-auto max-w-[1000px]">{children}</div>
+          </main>
         </Providers>
       </body>
     </html>

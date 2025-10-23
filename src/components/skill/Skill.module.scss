@@ -1,0 +1,21 @@
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0 0.5rem 0.5rem;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tabActive {
+  transform: scale(1.03);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
