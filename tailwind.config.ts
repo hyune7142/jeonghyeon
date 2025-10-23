@@ -12,7 +12,7 @@ const config: Config = {
         header: '80px', // 헤더 높이
       },
       fontFamily: {
-        sans: ['Arial', 'Helvetica', 'sans-serif'], // 기본 폰트
+        sans: ['var(--font-pretendard)', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'], // 코드 폰트
       },
     },

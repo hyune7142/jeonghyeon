@@ -8,6 +8,7 @@
 
 /* 전역 컬러 및 폰트 변수 정의 */
 :root {
+  --font-pretendard: 'Pretendard Variable', Pretendard, sans-serif;
   --primary: oklch(0.21 0.034 264.665);
   --secondary: oklch(0.967 0.003 264.542);
   --accent: oklch(0.967 0.003 264.542);
@@ -133,5 +134,7 @@
   html, body {
     min-width: 320px;
     @apply bg-background text-foreground;
+    font-family: var(--font-pretendard), sans-serif;
+    scroll-behavior: smooth;
   }
 }
