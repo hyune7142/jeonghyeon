@@ -54,7 +54,11 @@ const InlineCode: React.FC<Props> = ({ className, children }) => {
 };
 
 const Lead: React.FC<Props> = ({ className, children }) => {
-  return <p className={`text-muted-foreground text-xl ${className}`}>{children}</p>;
+  return (
+    <p className={`text-muted-foreground text-sm sm:text-base md:text-lg ${className}`}>
+      {children}
+    </p>
+  );
 };
 
 const Large: React.FC<Props> = ({ className, children }) => {

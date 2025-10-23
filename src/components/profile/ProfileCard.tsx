@@ -1,33 +1,43 @@
-import React from 'react';
+'use client';
 
 import { Github } from 'lucide-react';
+import { motion } from 'motion/react';
 
-import { Large, Lead } from '@/components/common/Typography';
+import { Large, H3, Lead } from '@/components/common/Typography';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+
+import ProfileItem from './ProfileItem';
 
 function ProfileCard() {
   return (
     <Card className="w-full">
       <CardHeader>
         <Large className="text-blue-500">Frontend Developer</Large>
-        <Large>이정현</Large>
+        <H3>이정현</H3>
       </CardHeader>
       <CardContent>
-        <Lead className="!text-sm">
-          안녕하세요. <br />
-          사용자 경험과 코드의 유지보수성을 최우선 가치로 두는 프론트엔드 개발자 이정현입니다.
-        </Lead>
+        <ProfileItem label={'생년월일'} value={'1991. 02. 07'} />
+        <ProfileItem label={'주소'} value={'경기도 광주시'} />
+        <div className="mt-5">
+          <Lead>저의 웹 포트폴리오에 방문해주셔서 감사드립니다.</Lead>
+        </div>
       </CardContent>
       <CardFooter>
-        <a
+        <motion.a
           href="https://github.com/Hyune7142"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-foreground/80 hover:text-foreground flex items-center gap-2 text-sm font-semibold transition-colors"
+          className="text-foreground/80 hover:text-foreground flex items-center gap-2 text-sm font-semibold transition-colors hover:text-blue-500"
+          whileHover={{
+            scale: 1.05,
+            opacity: 1,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
           <Github className="h-5 w-5" />
           GitHub
-        </a>
+        </motion.a>
       </CardFooter>
     </Card>
   );

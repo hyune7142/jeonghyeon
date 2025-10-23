@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header className="border-border/40 bg-background/80 fixed top-0 left-0 z-50 w-full border-b backdrop-blur-md transition-all">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex items-center justify-between px-6 py-4">
         {/* 로고 */}
         <Link href="/" className="text-foreground text-xl font-bold tracking-tight">
           <H3>JH</H3>
@@ -52,13 +52,13 @@ export default function Header() {
       {isOpen && (
         <div className="border-border/40 bg-background/95 absolute top-full left-0 w-full border-t backdrop-blur-md md:hidden">
           <nav className="flex flex-col items-center gap-4 py-4 font-semibold">
-            <Link href="/about" onClick={toggleMenu} className="hover:text-primary text-sm">
+            <Link href="#about" onClick={toggleMenu} className="hover:text-primary text-sm">
               About
             </Link>
-            <Link href="/work" onClick={toggleMenu} className="hover:text-primary text-sm">
+            <Link href="#work" onClick={toggleMenu} className="hover:text-primary text-sm">
               Work
             </Link>
-            <Link href="/project" onClick={toggleMenu} className="hover:text-primary text-sm">
+            <Link href="#project" onClick={toggleMenu} className="hover:text-primary text-sm">
               Project
             </Link>
           </nav>
