@@ -5,19 +5,25 @@ import { Code, Monitor, Server, Wrench } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Icons
-// import ReactNativeIcon from  '@/assets/skills/front/axios-icon.svg';
+import ExpressIcon from '@/assets/skills/back/express.svg';
+import SpringIcon from '@/assets/skills/back/spring-icon.svg';
+import AwsIcon from '@/assets/skills/etc/aws-icon.svg';
 import GitIcon from '@/assets/skills/etc/git-icon.svg?component';
 import GithubIcon from '@/assets/skills/etc/github-icon.svg?component';
 import GitlabIcon from '@/assets/skills/etc/gitlab-icon.svg?component';
 import NetlifyIcon from '@/assets/skills/etc/netlify-icon.svg?component';
 import VercelIcon from '@/assets/skills/etc/vercel-icon.svg?component';
 import AxiosIcon from '@/assets/skills/front/axios-icon.svg';
+import MotionIcon from '@/assets/skills/front/motion-icon.svg';
+import MuiIcon from '@/assets/skills/front/mui-icon.svg';
 import NextjsIcon from '@/assets/skills/front/nextjs-icon.svg';
 import PlaywrightIcon from '@/assets/skills/front/playwright.svg';
 import ReactIcon from '@/assets/skills/front/react-icon.svg';
+import ReactNativeIcon from '@/assets/skills/front/react-native-icon.svg';
 import RecoilIcon from '@/assets/skills/front/recoil-icon.svg';
 import ReduxIcon from '@/assets/skills/front/redux-icon.svg';
 import ReduxsagaIcon from '@/assets/skills/front/redux-saga-icon.svg';
+import ShadcnIcon from '@/assets/skills/front/shadcn-icon.svg';
 import TailwindcssIcon from '@/assets/skills/front/tailwindcss-icon.svg';
 import TanstackQueryIcon from '@/assets/skills/front/tanstack-query-icon.svg';
 import ZustandIcon from '@/assets/skills/front/zustand-icon.svg';
@@ -34,16 +40,6 @@ import styles from './Skill.module.scss';
 const skill: Record<string, Skill[]> = {
   language: [
     {
-      name: 'HTML',
-      icon: <Html5Icon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'HTML 태그를 사용할 수 있습니다.',
-    },
-    {
-      name: 'CSS',
-      icon: <Css3Icon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'CSS를 이용하여 레이아웃을 구현을 할 수 있습니다.',
-    },
-    {
       name: 'Javascript',
       icon: <JavascriptIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: 'ES6+ 문법을 활용한 코드 작성이 가능합니다.',
@@ -51,7 +47,17 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'Typescript',
       icon: <TypescriptIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '타입 기반 코드 설계와 안정적인 개발이 가능합니다',
+      desc: '타입 기반 코드 설계와 안정적인 개발이 가능합니다.',
+    },
+    {
+      name: 'HTML',
+      icon: <Html5Icon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'HTML 태그를 사용할 수 있습니다.',
+    },
+    {
+      name: 'CSS',
+      icon: <Css3Icon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'CSS를 이용하여 레이아웃을 구현할 수 있습니다.',
     },
     {
       name: 'Java',
@@ -63,42 +69,37 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'React',
       icon: <ReactIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '컴포넌트 기반 구조 설계와 상태 관리에 익숙합니다.',
+      desc: '컴포넌트 기반 구조 설계에 익숙하며, Atomic, FSD 패턴을 적용하여 개발한 경험이 있습니다.',
     },
-    // {
-    //   name: 'React Native',
-    //   icon: <ReactNativeIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-    //   desc: 'Expo 환경에서 크로스 플랫폼 앱을 개발한 경험이 있습니다.',
-    // },
     {
       name: 'Next.js',
       icon: <NextjsIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'SSR과 CSR을 활용한 프로젝트 개발 경험이 있습니다.',
+      desc: 'CSR, SSR, ISR 등 다양한 렌더링 전략을 활용한 경험이 있습니다.',
     },
     {
-      name: 'Axios',
-      icon: <AxiosIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'API 통신을 위한 비동기 데이터 처리에 활용합니다.',
+      name: 'React Native',
+      icon: <ReactNativeIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'Expo 환경에서 하이브리드 앱(iOS, Android)을 설계, 개발 및 운영한 경험이 있습니다.',
     },
     {
       name: 'Redux',
       icon: <ReduxIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '전역 상태 관리를 위해 Redux Toolkit을 활용할 수 있습니다.',
-    },
-    {
-      name: 'Redux-Saga',
-      icon: <ReduxsagaIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '비동기 로직을 제어하기 위한 미들웨어로 사용해보았습니다.',
+      desc: '전역 상태 관리를 위해 Redux Toolkit을 활용하여 개발한 경험이 있습니다.',
     },
     {
       name: 'Recoil',
       icon: <RecoilIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '간결한 전역 상태 관리가 필요한 프로젝트에서 사용했습니다.',
+      desc: '보안관제 솔루션 프로젝트에서 전역 상태 관리에 사용했습니다.',
     },
     {
       name: 'Zustand',
       icon: <ZustandIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'React 앱의 전역 상태 관리에 활용한 경험이 있습니다.',
+      desc: 'B2C 프로젝트에서 전역 상태 관리를 위해 사용했습니다.',
+    },
+    {
+      name: 'Redux-Saga',
+      icon: <ReduxsagaIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '비동기 로직을 제어하기 위한 Redux 미들웨어로 사용해보았습니다.',
     },
     {
       name: 'TanStack Query',
@@ -106,17 +107,48 @@ const skill: Record<string, Skill[]> = {
       desc: '데이터 캐싱 및 서버 상태 관리에 활용할 수 있습니다.',
     },
     {
+      name: 'Axios',
+      icon: <AxiosIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'API 통신을 위한 비동기 데이터 처리에 활용하였습니다.',
+    },
+    {
       name: 'Tailwind CSS',
       icon: <TailwindcssIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '유틸리티 퍼스트 접근으로 빠른 UI 스타일링이 가능합니다.',
+      desc: '프로젝트 전반의 UI를 유틸리티 퍼스트 방식으로 빠르게 구성할 수 있습니다.',
+    },
+    {
+      name: 'Mui',
+      icon: <MuiIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'React 프로젝트에서 빠르게 UI를 구성하기 위해 활용했습니다.',
+    },
+    {
+      name: 'Shadcn-ui',
+      icon: <ShadcnIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'Tailwind 기반의 UI 컴포넌트 시스템으로 학습을 위해 사용해봤습니다.',
+    },
+    {
+      name: 'Motion.dev',
+      icon: <MotionIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'React 애니메이션 구현을 위해 사용했으며, UI 인터랙션을 자연스럽게 구성했습니다.',
     },
     {
       name: 'Playwright',
       icon: <PlaywrightIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'E2E 테스트 자동화를 위한 도구로 활용할 수 있습니다.',
+      desc: 'E2E 테스트 자동화 도입을 위해 POC를 구성한 경험이 있습니다.',
     },
   ],
-  backend: [],
+  backend: [
+    {
+      name: 'Express',
+      icon: <ExpressIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'Firebase DynamicLink 대체용 딥링크 서버를 구축할 때 활용했습니다.',
+    },
+    {
+      name: 'Spring',
+      icon: <SpringIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '교육 과정 및 하이닉스 프로젝트에서 간단한 API를 개발했습니다.',
+    },
+  ],
   etc: [
     {
       name: 'Git',
@@ -126,22 +158,27 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'GitHub',
       icon: <GithubIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '협업을 위해 사용하였습니다.',
+      desc: '사내 협업 환경에서 사용했습니다.',
     },
     {
       name: 'GitLab',
       icon: <GitlabIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '협업을 위해 사용하였습니다.',
+      desc: '사내 협업 환경에서 사용했습니다.',
+    },
+    {
+      name: 'AWS',
+      icon: <AwsIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'S3, CloudFront, CodePipeline을 활용해 배포 환경을 경험해보았습니다.',
+    },
+    {
+      name: 'Vercel',
+      icon: <VercelIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'Next.js 프로젝트를 배포해보았습니다.',
     },
     {
       name: 'Netlify',
       icon: <NetlifyIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: 'React 프로젝트 배포를 해보았습니다.',
-    },
-    {
-      name: 'Vercel',
-      icon: <VercelIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'NextJS 프로젝트를 배포해보았습니다.',
     },
   ],
 };

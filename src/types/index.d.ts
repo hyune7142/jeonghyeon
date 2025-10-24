@@ -2,6 +2,7 @@ import React from 'react';
 
 export type Profile = {
   name: string;
+  email: string;
   birth: string;
   address: string;
   position: string;

@@ -7,6 +7,7 @@ export async function GET() {
   const profile: Profile = {
     name: '이정현',
     birth: '1991. 02. 07',
+    email: 'hyune7142@daum.net',
     address: '경기도 광주시',
     position: 'Frontend Developer',
     github: 'https://github.com/Hyune7142',

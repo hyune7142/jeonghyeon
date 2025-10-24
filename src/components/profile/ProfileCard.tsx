@@ -5,18 +5,12 @@ import { motion } from 'motion/react';
 
 import { Large, H3, Lead } from '@/components/common/Typography';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
+import type { Profile } from '@/types';
 
 import ProfileItem from './ProfileItem';
 
 interface ProfileCardProps {
-  profile: {
-    name: string;
-    birth: string;
-    address: string;
-    position: string;
-    github: string;
-    intro: string;
-  };
+  profile: Profile;
 }
 
 function ProfileCard({ profile }: ProfileCardProps) {
@@ -30,6 +24,7 @@ function ProfileCard({ profile }: ProfileCardProps) {
       <CardContent>
         <ProfileItem label="생년월일" value={profile.birth} />
         <ProfileItem label="주소" value={profile.address} />
+        <ProfileItem label="이메일" value={profile.email} />
         <div className="mt-5">
           <Lead>{profile.intro}</Lead>
         </div>
