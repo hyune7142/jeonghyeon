@@ -74,7 +74,7 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'Next.js',
       icon: <NextjsIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'CSR, SSR, ISR 등 다양한 렌더링 전략을 활용한 경험이 있습니다.',
+      desc: 'CSR, SSR, ISR 학습을 위해 사용해보았습니다.',
     },
     {
       name: 'React Native',
@@ -84,22 +84,22 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'Redux',
       icon: <ReduxIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '전역 상태 관리를 위해 Redux Toolkit을 활용하여 개발한 경험이 있습니다.',
-    },
-    {
-      name: 'Recoil',
-      icon: <RecoilIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '보안관제 솔루션 프로젝트에서 전역 상태 관리에 사용했습니다.',
-    },
-    {
-      name: 'Zustand',
-      icon: <ZustandIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'B2C 프로젝트에서 전역 상태 관리를 위해 사용했습니다.',
+      desc: '전역 상태 관리를 위해 Redux(Redux Toolkit)을 활용하여 개발한 경험이 있습니다.',
     },
     {
       name: 'Redux-Saga',
       icon: <ReduxsagaIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '비동기 로직을 제어하기 위한 Redux 미들웨어로 사용해보았습니다.',
+      desc: '비동기 로직을 제어하기 위한 Redux 미들웨어로 사용해봤습니다.',
+    },
+    {
+      name: 'Recoil',
+      icon: <RecoilIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '전역 상태 관리 및 데이터 캐싱을 위해 사용했습니다.',
+    },
+    {
+      name: 'Zustand',
+      icon: <ZustandIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '최근 프로젝트에서 전역 상태 관리를 위해 사용했습니다.',
     },
     {
       name: 'TanStack Query',
@@ -114,7 +114,7 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'Tailwind CSS',
       icon: <TailwindcssIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '프로젝트 전반의 UI를 유틸리티 퍼스트 방식으로 빠르게 구성할 수 있습니다.',
+      desc: '유틸리티 퍼스트 방식의 스타일링을 학습하기 위해 사용해봤습니다.',
     },
     {
       name: 'Mui',
@@ -168,7 +168,7 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'AWS',
       icon: <AwsIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'S3, CloudFront, CodePipeline을 활용해 배포 환경을 경험해보았습니다.',
+      desc: 'S3, CloudFront, CodePipeline 등을 활용한 배포 환경을 경험해보았습니다.',
     },
     {
       name: 'Vercel',
@@ -200,7 +200,7 @@ export default function SkillSection() {
   useEffect(() => {
     if (!hasMounted.current) {
       hasMounted.current = true;
-      return; // 🚫 첫 렌더에서는 실행하지 않음
+      return;
     }
 
     const activeButton = tabRefs.current[activeTab];

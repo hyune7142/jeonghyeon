@@ -72,7 +72,7 @@ export default function SkillCard({ skill }: SkillCardProps) {
         <motion.div
           animate={isClient ? descControls : undefined}
           initial={{ opacity: 0, x: 40 }}
-          className="text-muted-foreground absolute left-[100px] p-2 text-sm sm:left-[120px] md:left-[150px] md:text-base lg:left-[180px]"
+          className="text-muted-foreground absolute left-[100px] px-4 py-2 text-sm sm:left-[120px] md:left-[140px] md:text-base lg:left-[150px]"
         >
           {skill.desc}
         </motion.div>
