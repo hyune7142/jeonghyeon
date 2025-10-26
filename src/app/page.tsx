@@ -1,6 +1,6 @@
 // import AboutMeSection from '@/components/sections/AboutMeSection';
 import IntroSection from '@/components/sections/IntroSection';
-import ProjectsSection from '@/components/sections/ProjectsSection';
+// import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import WorkExperience from '@/components/sections/WorkExperience';
 
@@ -10,7 +10,7 @@ function Home() {
       <IntroSection />
       {/* <AboutMeSection /> */}
       <SkillsSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <WorkExperience />
     </div>
   );

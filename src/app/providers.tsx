@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'next-themes';
 
+import { TooltipProvider } from '@/components/ui/tooltip';
+
 export default function Providers({ children }: { children: ReactNode }) {
   const [client] = useState(
     () =>
@@ -28,7 +30,7 @@ export default function Providers({ children }: { children: ReactNode }) {
         enableSystem={true}
         disableTransitionOnChange
       >
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </ThemeProvider>
       {process.env.NODE_ENV !== 'production' && (
         <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-right" />

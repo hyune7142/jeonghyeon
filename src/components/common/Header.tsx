@@ -24,14 +24,11 @@ export default function Header() {
 
         {/* 데스크탑 메뉴 */}
         <nav className="hidden items-center gap-8 font-semibold md:flex">
-          <a href="#about" className="text-foreground/80 hover:text-foreground text-sm">
-            About
-          </a>
           <a href="#skill" className="text-foreground/80 hover:text-foreground text-sm">
             Skills
           </a>
-          <a href="#project" className="text-foreground/80 hover:text-foreground text-sm">
-            Project
+          <a href="#work" className="text-foreground/80 hover:text-foreground text-sm">
+            Work Experience
           </a>
           <ThemeToggle />
         </nav>
@@ -52,14 +49,11 @@ export default function Header() {
       {isOpen && (
         <div className="border-border/40 bg-background/95 absolute top-full left-0 w-full border-t backdrop-blur-md md:hidden">
           <nav className="flex flex-col items-center gap-4 py-4 font-semibold">
-            <Link href="#about" onClick={toggleMenu} className="hover:text-primary text-sm">
-              About
-            </Link>
             <Link href="#skill" onClick={toggleMenu} className="hover:text-primary text-sm">
               Skills
             </Link>
-            <Link href="#project" onClick={toggleMenu} className="hover:text-primary text-sm">
-              Project
+            <Link href="#work" onClick={toggleMenu} className="hover:text-primary text-sm">
+              Work Experience
             </Link>
           </nav>
         </div>

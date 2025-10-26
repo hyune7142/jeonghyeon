@@ -10,6 +10,39 @@ export type Profile = {
   intro: string;
 };
 
+export type SkillName =
+  // language
+  | 'Javascript'
+  | 'Typescript'
+  | 'HTML'
+  | 'CSS'
+  | 'Java'
+  // frontend
+  | 'React'
+  | 'Next.js'
+  | 'React Native'
+  | 'Redux'
+  | 'Redux-Saga'
+  | 'Recoil'
+  | 'Zustand'
+  | 'TanStack Query'
+  | 'Axios'
+  | 'Tailwind CSS'
+  | 'Mui'
+  | 'Shadcn-ui'
+  | 'Motion.dev'
+  | 'Playwright'
+  // backend
+  | 'Express'
+  | 'Spring'
+  // etc
+  | 'Git'
+  | 'GitHub'
+  | 'GitLab'
+  | 'AWS'
+  | 'Vercel'
+  | 'Netlify';
+
 export type SkillTabKey = 'language' | 'frontend' | 'backend' | 'etc';
 
 export type SkillTab = {
@@ -19,7 +52,17 @@ export type SkillTab = {
 };
 
 export type Skill = {
-  name: string;
+  name: SkillName;
   icon: React.ReactNode;
   desc: string;
+};
+
+export type WorkExperience = {
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  keyTasks: string[];
+  skills: SkillName[];
 };
