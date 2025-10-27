@@ -1,37 +1,49 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-import { Code, Monitor, Server, Wrench } from 'lucide-react';
+import { Code, Monitor, Server, Wrench, Database } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Icons
-import ExpressIcon from '@/assets/skills/back/express.svg';
-import SpringIcon from '@/assets/skills/back/spring-icon.svg';
-import AwsIcon from '@/assets/skills/etc/aws-icon.svg';
-import GitIcon from '@/assets/skills/etc/git-icon.svg?component';
-import GithubIcon from '@/assets/skills/etc/github-icon.svg?component';
-import GitlabIcon from '@/assets/skills/etc/gitlab-icon.svg?component';
-import NetlifyIcon from '@/assets/skills/etc/netlify-icon.svg?component';
-import VercelIcon from '@/assets/skills/etc/vercel-icon.svg?component';
-import AxiosIcon from '@/assets/skills/front/axios-icon.svg';
-import MotionIcon from '@/assets/skills/front/motion-icon.svg';
-import MuiIcon from '@/assets/skills/front/mui-icon.svg';
-import NextjsIcon from '@/assets/skills/front/nextjs-icon.svg';
-import PlaywrightIcon from '@/assets/skills/front/playwright.svg';
-import ReactIcon from '@/assets/skills/front/react-icon.svg';
-import ReactNativeIcon from '@/assets/skills/front/react-native-icon.svg';
-import RecoilIcon from '@/assets/skills/front/recoil-icon.svg';
-import ReduxIcon from '@/assets/skills/front/redux-icon.svg';
-import ReduxsagaIcon from '@/assets/skills/front/redux-saga-icon.svg';
-import ShadcnIcon from '@/assets/skills/front/shadcn-icon.svg';
-import TailwindcssIcon from '@/assets/skills/front/tailwindcss-icon.svg';
-import TanstackQueryIcon from '@/assets/skills/front/tanstack-query-icon.svg';
-import ZustandIcon from '@/assets/skills/front/zustand-icon.svg';
-import Css3Icon from '@/assets/skills/lang/css3.svg';
-import Html5Icon from '@/assets/skills/lang/html5.svg';
-import JavaIcon from '@/assets/skills/lang/java.svg';
-import JavascriptIcon from '@/assets/skills/lang/javascript.svg';
-import TypescriptIcon from '@/assets/skills/lang/typescript-icon.svg';
+import {
+  // Frontend
+  AxiosIcon,
+  MotionIcon,
+  MuiIcon,
+  AntdIcon,
+  NextjsIcon,
+  PlaywrightIcon,
+  ReactIcon,
+  ReactNativeIcon,
+  RecoilIcon,
+  ReduxIcon,
+  ReduxsagaIcon,
+  ShadcnIcon,
+  TailwindcssIcon,
+  TanstackQueryIcon,
+  ZustandIcon,
+  ExpoIcon,
+  // Backend
+  ExpressIcon,
+  SpringIcon,
+  // ETC
+  AwsIcon,
+  GitIcon,
+  GithubIcon,
+  GitlabIcon,
+  NetlifyIcon,
+  VercelIcon,
+  // Database
+  OracleIcon,
+  PostgresqlIcon,
+  RedisIcon,
+  // Languages
+  Css3Icon,
+  Html5Icon,
+  JavaIcon,
+  JavascriptIcon,
+  TypescriptIcon,
+} from '@/assets/skills';
 import SkillCard from '@/components/skill/SkillCard';
 import { Skill, SkillTab, SkillTabKey } from '@/types';
 
@@ -79,7 +91,12 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'React Native',
       icon: <ReactNativeIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'Expo 환경에서 하이브리드 앱(iOS, Android)을 설계, 개발 및 운영한 경험이 있습니다.',
+      desc: '하이브리드 앱(iOS, Android)을 설계, 개발 및 운영한 경험이 있습니다.',
+    },
+    {
+      name: 'Expo',
+      icon: <ExpoIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'Expo 환경에서 네이티브 모듈 관리와 환경 설정을 수행하고, EAS Local Build를 활용해 크로스플랫폼 앱을 빌드 및 운영했습니다.',
     },
     {
       name: 'Redux',
@@ -122,6 +139,11 @@ const skill: Record<string, Skill[]> = {
       desc: 'React 프로젝트에서 빠르게 UI를 구성하기 위해 활용했습니다.',
     },
     {
+      name: 'Ant Design',
+      icon: <AntdIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'React 프로젝트에서 빠르게 UI를 구성하기 위해 활용했습니다.',
+    },
+    {
       name: 'Shadcn-ui',
       icon: <ShadcnIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: 'Tailwind 기반의 UI 컴포넌트 시스템으로 학습을 위해 사용해봤습니다.',
@@ -147,6 +169,23 @@ const skill: Record<string, Skill[]> = {
       name: 'Spring',
       icon: <SpringIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: '교육 과정 및 하이닉스 프로젝트에서 간단한 API를 개발했습니다.',
+    },
+  ],
+  database: [
+    {
+      name: 'Oracle DB',
+      icon: <OracleIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'API 개발에 필요한 기본적인 데이터 조회 및 쿼리 작성이 가능합니다.',
+    },
+    {
+      name: 'PostgreSQL',
+      icon: <PostgresqlIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'API 개발에 필요한 기본적인 데이터 조회 및 쿼리 작성이 가능합니다.',
+    },
+    {
+      name: 'Redis',
+      icon: <RedisIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'API 서버의 성능 최적화를 위해 Redis를 캐시 스토어로 구성해 활용했습니다.',
     },
   ],
   etc: [
@@ -187,6 +226,7 @@ const skillTabs: SkillTab[] = [
   { key: 'language', label: 'Languages', icon: <Code size={16} /> },
   { key: 'frontend', label: 'Frontend', icon: <Monitor size={16} /> },
   { key: 'backend', label: 'Backend', icon: <Server size={16} /> },
+  { key: 'database', label: 'DataBase', icon: <Database size={16} /> },
   { key: 'etc', label: 'Others', icon: <Wrench size={16} /> },
 ];
 
@@ -237,7 +277,7 @@ export default function SkillSection() {
       </div>
 
       {/* 스킬 리스트 */}
-      <div className="mt-6 flex w-full justify-center">
+      <div className="mt-6 flex w-full max-w-4xl justify-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -252,7 +292,7 @@ export default function SkillSection() {
                 transition: { delayChildren: 0.15 },
               },
             }}
-            className="flex w-full max-w-[700px] flex-col items-center gap-3 px-4"
+            className="flex w-full flex-col items-center gap-3 px-4"
           >
             {skill[activeTab].map(skill => (
               <SkillCard key={`${activeTab}_${skill.name}`} skill={skill} />

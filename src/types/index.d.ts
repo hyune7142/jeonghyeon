@@ -32,9 +32,15 @@ export type SkillName =
   | 'Shadcn-ui'
   | 'Motion.dev'
   | 'Playwright'
+  | 'Expo'
+  | 'Ant Design'
   // backend
   | 'Express'
   | 'Spring'
+  // DataBase
+  | 'Oracle DB'
+  | 'PostgreSQL'
+  | 'Redis'
   // etc
   | 'Git'
   | 'GitHub'
@@ -43,7 +49,7 @@ export type SkillName =
   | 'Vercel'
   | 'Netlify';
 
-export type SkillTabKey = 'language' | 'frontend' | 'backend' | 'etc';
+export type SkillTabKey = 'language' | 'frontend' | 'backend' | 'database' | 'etc';
 
 export type SkillTab = {
   key: SkillTabKey;
@@ -62,7 +68,7 @@ export type WorkExperience = {
   position: string;
   startDate: string;
   endDate: string;
-  description: string;
+  dept: string;
   keyTasks: string[];
   skills: SkillName[];
 };

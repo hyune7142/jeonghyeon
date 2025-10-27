@@ -1,33 +1,45 @@
 import React from 'react';
 
 // Icons
-import ExpressIcon from '@/assets/skills/back/express.svg';
-import SpringIcon from '@/assets/skills/back/spring-icon.svg';
-import AwsIcon from '@/assets/skills/etc/aws-icon.svg';
-import GitIcon from '@/assets/skills/etc/git-icon.svg?component';
-import GithubIcon from '@/assets/skills/etc/github-icon.svg?component';
-import GitlabIcon from '@/assets/skills/etc/gitlab-icon.svg?component';
-import NetlifyIcon from '@/assets/skills/etc/netlify-icon.svg?component';
-import VercelIcon from '@/assets/skills/etc/vercel-icon.svg?component';
-import AxiosIcon from '@/assets/skills/front/axios-icon.svg';
-import MotionIcon from '@/assets/skills/front/motion-icon.svg';
-import MuiIcon from '@/assets/skills/front/mui-icon.svg';
-import NextjsIcon from '@/assets/skills/front/nextjs-icon.svg';
-import PlaywrightIcon from '@/assets/skills/front/playwright.svg';
-import ReactIcon from '@/assets/skills/front/react-icon.svg';
-import ReactNativeIcon from '@/assets/skills/front/react-native-icon.svg';
-import RecoilIcon from '@/assets/skills/front/recoil-icon.svg';
-import ReduxIcon from '@/assets/skills/front/redux-icon.svg';
-import ReduxsagaIcon from '@/assets/skills/front/redux-saga-icon.svg';
-import ShadcnIcon from '@/assets/skills/front/shadcn-icon.svg';
-import TailwindcssIcon from '@/assets/skills/front/tailwindcss-icon.svg';
-import TanstackQueryIcon from '@/assets/skills/front/tanstack-query-icon.svg';
-import ZustandIcon from '@/assets/skills/front/zustand-icon.svg';
-import Css3Icon from '@/assets/skills/lang/css3.svg';
-import Html5Icon from '@/assets/skills/lang/html5.svg';
-import JavaIcon from '@/assets/skills/lang/java.svg';
-import JavascriptIcon from '@/assets/skills/lang/javascript.svg';
-import TypescriptIcon from '@/assets/skills/lang/typescript-icon.svg';
+import {
+  // Frontend
+  AxiosIcon,
+  MotionIcon,
+  MuiIcon,
+  AntdIcon,
+  NextjsIcon,
+  PlaywrightIcon,
+  ReactIcon,
+  ReactNativeIcon,
+  RecoilIcon,
+  ReduxIcon,
+  ReduxsagaIcon,
+  ShadcnIcon,
+  TailwindcssIcon,
+  TanstackQueryIcon,
+  ZustandIcon,
+  ExpoIcon,
+  // Backend
+  ExpressIcon,
+  SpringIcon,
+  // ETC
+  AwsIcon,
+  GitIcon,
+  GithubIcon,
+  GitlabIcon,
+  NetlifyIcon,
+  VercelIcon,
+  // Database
+  OracleIcon,
+  PostgresqlIcon,
+  RedisIcon,
+  // Languages
+  Css3Icon,
+  Html5Icon,
+  JavaIcon,
+  JavascriptIcon,
+  TypescriptIcon,
+} from '@/assets/skills';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { SkillName } from '@/types';
@@ -58,12 +70,18 @@ const skillIconMap: Record<SkillName, React.ComponentType<{ className?: string }
   Axios: AxiosIcon,
   'Tailwind CSS': TailwindcssIcon,
   Mui: MuiIcon,
+  'Ant Design': AntdIcon,
   'Shadcn-ui': ShadcnIcon,
   'Motion.dev': MotionIcon,
   Playwright: PlaywrightIcon,
+  Expo: ExpoIcon,
   // backend
   Express: ExpressIcon,
   Spring: SpringIcon,
+  // DataBase
+  'Oracle DB': OracleIcon,
+  PostgreSQL: PostgresqlIcon,
+  Redis: RedisIcon,
   // etc
   Git: GitIcon,
   GitHub: GithubIcon,
@@ -84,7 +102,7 @@ function SkillBox({ className, name }: SkillBoxProps) {
       <TooltipTrigger asChild>
         <div
           className={cn(
-            'bg-muted flex aspect-square h-9 w-9 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1',
+            'bg-muted flex aspect-square h-8 w-8 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1',
             className
           )}
         >
