@@ -14,6 +14,8 @@ export { default as TailwindcssIcon } from './front/tailwindcss-icon.svg';
 export { default as TanstackQueryIcon } from './front/tanstack-query-icon.svg';
 export { default as ZustandIcon } from './front/zustand-icon.svg';
 export { default as ExpoIcon } from './front/expo-icon.svg';
+export { default as StorybookIcon } from './front/storybook-icon.svg';
+export { default as FigmaIcon } from './front/figma-icon.svg';
 
 export { default as ExpressIcon } from './back/express.svg';
 export { default as SpringIcon } from './back/spring-icon.svg';
@@ -28,6 +30,8 @@ export { default as GithubIcon } from './etc/github-icon.svg';
 export { default as GitlabIcon } from './etc/gitlab-icon.svg';
 export { default as NetlifyIcon } from './etc/netlify-icon.svg';
 export { default as VercelIcon } from './etc/vercel-icon.svg';
+export { default as JiraIcon } from './etc/jira-icon.svg';
+export { default as ConfluenceIcon } from './etc/confluence-icon.svg';
 
 export { default as Css3Icon } from './lang/css3.svg';
 export { default as Html5Icon } from './lang/html5.svg';

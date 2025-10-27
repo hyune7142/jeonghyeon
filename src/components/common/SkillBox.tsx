@@ -39,6 +39,10 @@ import {
   JavaIcon,
   JavascriptIcon,
   TypescriptIcon,
+  JiraIcon,
+  ConfluenceIcon,
+  StorybookIcon,
+  FigmaIcon,
 } from '@/assets/skills';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
@@ -75,6 +79,8 @@ const skillIconMap: Record<SkillName, React.ComponentType<{ className?: string }
   'Motion.dev': MotionIcon,
   Playwright: PlaywrightIcon,
   Expo: ExpoIcon,
+  Storybook: StorybookIcon,
+  Figma: FigmaIcon,
   // backend
   Express: ExpressIcon,
   Spring: SpringIcon,
@@ -89,6 +95,8 @@ const skillIconMap: Record<SkillName, React.ComponentType<{ className?: string }
   AWS: AwsIcon,
   Vercel: VercelIcon,
   Netlify: NetlifyIcon,
+  Jira: JiraIcon,
+  Confluence: ConfluenceIcon,
 };
 
 function SkillBox({ className, name }: SkillBoxProps) {
@@ -102,7 +110,7 @@ function SkillBox({ className, name }: SkillBoxProps) {
       <TooltipTrigger asChild>
         <div
           className={cn(
-            'bg-muted flex aspect-square h-8 w-8 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1',
+            'bg-muted flex aspect-square h-8 w-8 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1 hover:border-blue-500 dark:hover:border-blue-500',
             className
           )}
         >

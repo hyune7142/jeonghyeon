@@ -56,7 +56,7 @@ function WorkExperienceItem({ history, current }: WorkExperienceItemProps) {
               {keyTasks.map((task, index) => (
                 <Text
                   key={`key-task-${index}`}
-                  className="relative pl-4 text-[16px] before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:text-blue-400 before:content-['•']"
+                  className="relative pl-4 text-[16px] before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:content-['•']"
                 >
                   {task}
                 </Text>

@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning className={`${pretendard.variable}`}>
-      <body className="min-w-[320px]">
+      <body suppressHydrationWarning className="min-w-[320px]">
         <Providers>
           <Header />
           <main className="min-w-[320px] p-6 pt-[var(--header-height)]">

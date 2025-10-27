@@ -10,6 +10,12 @@ export type Profile = {
   intro: string;
 };
 
+export type Expertise = {
+  img: string;
+  title: string;
+  desc: string;
+};
+
 export type SkillName =
   // language
   | 'Javascript'
@@ -34,6 +40,8 @@ export type SkillName =
   | 'Playwright'
   | 'Expo'
   | 'Ant Design'
+  | 'Figma'
+  | 'Storybook'
   // backend
   | 'Express'
   | 'Spring'
@@ -47,7 +55,9 @@ export type SkillName =
   | 'GitLab'
   | 'AWS'
   | 'Vercel'
-  | 'Netlify';
+  | 'Netlify'
+  | 'Jira'
+  | 'Confluence';
 
 export type SkillTabKey = 'language' | 'frontend' | 'backend' | 'database' | 'etc';
 

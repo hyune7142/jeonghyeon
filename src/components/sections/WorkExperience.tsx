@@ -7,7 +7,7 @@ import WorkExperienceList from '@/components/work/WorkExperienceList';
 
 function WorkExperience() {
   return (
-    <Section sectionId="work" title="업무경력">
+    <Section sectionId="experience" title="업무경험">
       <WorkExperienceList />
     </Section>
   );

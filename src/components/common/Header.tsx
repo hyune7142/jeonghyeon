@@ -24,11 +24,14 @@ export default function Header() {
 
         {/* 데스크탑 메뉴 */}
         <nav className="hidden items-center gap-8 font-semibold md:flex">
-          <a href="#skill" className="text-foreground/80 hover:text-foreground text-sm">
-            Skills
+          <a href="#expertise" className="text-foreground/80 hover:text-foreground text-sm">
+            핵심역량
           </a>
-          <a href="#work" className="text-foreground/80 hover:text-foreground text-sm">
-            Work Experience
+          <a href="#skill" className="text-foreground/80 hover:text-foreground text-sm">
+            기술
+          </a>
+          <a href="#experience" className="text-foreground/80 hover:text-foreground text-sm">
+            경력
           </a>
           <ThemeToggle />
         </nav>
@@ -49,11 +52,14 @@ export default function Header() {
       {isOpen && (
         <div className="border-border/40 bg-background/95 absolute top-full left-0 w-full border-t backdrop-blur-md md:hidden">
           <nav className="flex flex-col items-center gap-4 py-4 font-semibold">
-            <Link href="#skill" onClick={toggleMenu} className="hover:text-primary text-sm">
-              Skills
+            <Link href="#expertise" onClick={toggleMenu} className="hover:text-primary text-sm">
+              핵심역량
             </Link>
-            <Link href="#work" onClick={toggleMenu} className="hover:text-primary text-sm">
-              Work Experience
+            <Link href="#skill" onClick={toggleMenu} className="hover:text-primary text-sm">
+              기술
+            </Link>
+            <Link href="#experience" onClick={toggleMenu} className="hover:text-primary text-sm">
+              경력
             </Link>
           </nav>
         </div>

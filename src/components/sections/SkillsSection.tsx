@@ -7,7 +7,7 @@ import Skills from '@/components/skill/Skill';
 
 function SkillsSection() {
   return (
-    <Section sectionId="skill" title="스킬">
+    <Section sectionId="skill" title="기술 스택 및 도구">
       <Skills />
     </Section>
   );

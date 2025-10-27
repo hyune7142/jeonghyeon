@@ -43,6 +43,10 @@ import {
   JavaIcon,
   JavascriptIcon,
   TypescriptIcon,
+  JiraIcon,
+  ConfluenceIcon,
+  StorybookIcon,
+  FigmaIcon,
 } from '@/assets/skills';
 import SkillCard from '@/components/skill/SkillCard';
 import { Skill, SkillTab, SkillTabKey } from '@/types';
@@ -147,14 +151,14 @@ const skill: Record<string, Skill[]> = {
       desc: 'Tailwind 기반의 UI 컴포넌트 시스템으로 학습을 위해 사용해봤습니다.',
     },
     {
+      name: 'Storybook',
+      icon: <StorybookIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'UI 컴포넌트를 독립적으로 개발·테스트하고 문서화하기 위해 사용했습니다.',
+    },
+    {
       name: 'Motion.dev',
       icon: <MotionIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: 'React 애니메이션 구현을 위해 사용했으며, UI 인터랙션을 자연스럽게 구성했습니다.',
-    },
-    {
-      name: 'Playwright',
-      icon: <PlaywrightIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: 'E2E 테스트 자동화 도입을 위해 POC를 구성한 경험이 있습니다.',
     },
   ],
   backend: [
@@ -166,7 +170,7 @@ const skill: Record<string, Skill[]> = {
     {
       name: 'Spring',
       icon: <SpringIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
-      desc: '교육 과정 및 하이닉스 프로젝트에서 간단한 API를 개발했습니다.',
+      desc: '교육 과정 및 하이닉스 프로젝트에서 페이지 개발에 필요한 API를 개발했습니다.',
     },
   ],
   database: [
@@ -188,6 +192,16 @@ const skill: Record<string, Skill[]> = {
   ],
   etc: [
     {
+      name: 'Figma',
+      icon: <FigmaIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'UI·UX 설계와 프로토타이핑, 디자이너와의 협업에 활용했습니다.',
+    },
+    {
+      name: 'Playwright',
+      icon: <PlaywrightIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: 'E2E 테스트 자동화 도입을 위해 POC를 구성한 경험이 있습니다.',
+    },
+    {
       name: 'Git',
       icon: <GitIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: '프로젝트 형상관리를 위해 사용하였습니다.',
@@ -201,6 +215,16 @@ const skill: Record<string, Skill[]> = {
       name: 'GitLab',
       icon: <GitlabIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
       desc: '사내 협업 환경에서 사용했습니다.',
+    },
+    {
+      name: 'Jira',
+      icon: <JiraIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '칸반보드를 활용해 이슈 및 프로젝트를 체계적으로 관리했습니다.',
+    },
+    {
+      name: 'Confluence',
+      icon: <ConfluenceIcon className="h-8 w-8 sm:h-10 sm:w-10" />,
+      desc: '프로젝트 문서화와 기술 공유를 위해 사용했습니다.',
     },
     {
       name: 'AWS',

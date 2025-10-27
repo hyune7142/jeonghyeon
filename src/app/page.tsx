@@ -1,4 +1,4 @@
-// import AboutMeSection from '@/components/sections/AboutMeSection';
+import ExpertiseSection from '@/components/sections/ExpertiseSection';
 import IntroSection from '@/components/sections/IntroSection';
 // import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="flex flex-col gap-15">
       <IntroSection />
-      {/* <AboutMeSection /> */}
+      <ExpertiseSection />
       <SkillsSection />
       {/* <ProjectsSection /> */}
       <WorkExperience />
