@@ -47,8 +47,6 @@ import {
 import SkillCard from '@/components/skill/SkillCard';
 import { Skill, SkillTab, SkillTabKey } from '@/types';
 
-import styles from './Skill.module.scss';
-
 const skill: Record<string, Skill[]> = {
   language: [
     {
@@ -256,7 +254,10 @@ export default function SkillSection() {
   return (
     <div className="flex flex-col items-center">
       {/* 스킬 탭 */}
-      <div ref={containerRef} className={styles.tabContainer}>
+      <div
+        ref={containerRef}
+        className="flex w-full items-center justify-start gap-2 overflow-x-auto overflow-y-hidden px-3 pb-2 whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] md:justify-center md:overflow-x-visible [&::-webkit-scrollbar]:hidden"
+      >
         {skillTabs.map(tab => (
           <button
             key={tab.key}
@@ -266,7 +267,7 @@ export default function SkillSection() {
             onClick={() => setActiveTab(tab.key as SkillTabKey)}
             className={`flex flex-shrink-0 items-center gap-2 rounded-md px-4 py-2 transition-all ${
               activeTab === tab.key
-                ? `bg-primary text-primary-foreground ${styles.tabActive}`
+                ? 'bg-primary text-primary-foreground scale-[1.03] shadow-md shadow-black/10 dark:shadow-white/10'
                 : 'bg-muted text-muted-foreground hover:bg-muted/70'
             }`}
           >
