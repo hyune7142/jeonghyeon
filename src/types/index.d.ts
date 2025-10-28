@@ -82,3 +82,18 @@ export type WorkExperience = {
   keyTasks: string[];
   skills: SkillName[];
 };
+
+// 프로젝트 상세
+export interface ProjectInfo {
+  name: string;
+  desc: string;
+  skills: SkillName[];
+}
+
+export interface ProjectDetail extends ProjectInfo {
+  startDate: string;
+  endDate: string;
+  members: string | number;
+  details: string[];
+  serviceLink?: string;
+}

@@ -33,6 +33,9 @@ export default function Header() {
           <a href="#experience" className="text-foreground/80 hover:text-foreground text-sm">
             경력
           </a>
+          <a href="#project" className="text-foreground/80 hover:text-foreground text-sm">
+            프로젝트
+          </a>
           <ThemeToggle />
         </nav>
 
@@ -60,6 +63,9 @@ export default function Header() {
             </Link>
             <Link href="#experience" onClick={toggleMenu} className="hover:text-primary text-sm">
               경력
+            </Link>
+            <Link href="#project" onClick={toggleMenu} className="hover:text-primary text-sm">
+              프로젝트
             </Link>
           </nav>
         </div>
