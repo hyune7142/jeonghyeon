@@ -27,18 +27,15 @@ export default function ProjectWithDock() {
     },
     {
       title: '이글루코퍼레이션',
-      content: [
-        '보안관제 통합 솔루션 ExD 프론트엔드 개발',
-        '보안관제 AI 솔루션 프론트엔드 개발 및 운영',
-      ],
+      content: ['보안관제 통합 솔루션 ExD 개발', '보안관제 AI 솔루션  개발 및 운영'],
       logo: iglooLogo,
     },
     {
       title: '클러쉬 (구 케이비시스)',
       content: [
-        'SK 하이닉스 - Cube 2.0',
-        'Magnachip 반도체 - 레거시 시스템 교체 프로젝트',
-        'SK 하이닉스 - Infinity Dashboard',
+        'SK 하이닉스 Cube 2.0',
+        'Magnachip 레거시 시스템 교체 프로젝트',
+        'SK 하이닉스 Infinity Dashboard',
       ],
       logo: kbsysLogo,
     },
@@ -59,7 +56,7 @@ export default function ProjectWithDock() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[680px] w-full flex-col items-center justify-center pb-16">
+    <section className="relative flex min-h-[500px] w-full flex-col items-center justify-center pb-16 md:min-h-[650px]">
       <div className="relative flex h-[320px] w-full items-center justify-center sm:h-[360px] md:h-[420px] lg:h-[450px]">
         <CardSwap
           ref={swapRef}
@@ -80,7 +77,7 @@ export default function ProjectWithDock() {
                     baseIntensity={0.1}
                     enableHover
                     hoverIntensity={0}
-                    fontSize="clamp(2rem, 1rem, 5rem)"
+                    fontSize="clamp(1rem, 4vw, 2.2rem)"
                   >
                     {text}
                   </FuzzyText>
