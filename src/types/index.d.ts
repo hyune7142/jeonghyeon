@@ -1,5 +1,7 @@
 import React from 'react';
 
+import type { StaticImageData } from 'next/image';
+
 export type Profile = {
   name: string;
   email: string;
@@ -84,6 +86,12 @@ export type WorkExperience = {
 };
 
 // 프로젝트 상세
+export type Company = {
+  title: string;
+  content: string[];
+  logo: StaticImageData;
+};
+
 export interface ProjectInfo {
   name: string;
   desc: string;
