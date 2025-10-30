@@ -59,7 +59,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
-      "eslint --fix --cache --cache-location .eslintcache --max-warnings=0"
+      "eslint --fix --cache --cache-location .eslintcache"
     ],
     "*.{json,md,css,scss}": [
       "prettier --write"

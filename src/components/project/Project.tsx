@@ -7,8 +7,7 @@ import iglooLogo from '@/assets/company/igloo-logo.webp';
 import kbsysLogo from '@/assets/company/kbsys-logo.webp';
 import macrogenLogo from '@/assets/company/macrogen-logo.webp';
 import CardSwap, { Card, CardSwapHandle } from '@/components/common/CardSwap';
-import FuzzyText from '@/components/common/FuzzyText';
-import { H1, P } from '@/components/common/Typography';
+import { H3, P } from '@/components/common/Typography';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Company } from '@/types';
 
@@ -68,19 +67,12 @@ export default function ProjectWithDock() {
           {companyList.map((item, i) => (
             <Card key={i} data-title={item.title}>
               <div className="flex h-full flex-col items-center justify-center text-center text-gray-900 dark:text-white">
-                <H1 className="mb-5">{item.title}</H1>
-                <div className="mx-auto mb-6 h-[3px] w-16 rounded-full bg-gray-300 dark:bg-gray-600" />
+                <H3 className="mb-2">{item.title}</H3>
+                <div className="mx-auto mb-5 h-[2px] w-16 rounded-full bg-gray-300 dark:bg-gray-600" />
                 {item.content.map((text, idx) => (
-                  <FuzzyText
-                    className="mb-5 cursor-pointer"
-                    key={`${item.title}-content-${idx}`}
-                    baseIntensity={0.1}
-                    enableHover
-                    hoverIntensity={0}
-                    fontSize="clamp(1rem, 4vw, 2.2rem)"
-                  >
+                  <P className="cursor-pointer" key={`${item.title}-content-${idx}`}>
                     {text}
-                  </FuzzyText>
+                  </P>
                 ))}
               </div>
             </Card>

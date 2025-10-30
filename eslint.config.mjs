@@ -61,7 +61,7 @@ const eslintConfig = [
             },
           ],
           pathGroupsExcludedImportTypes: ['react'], // 중복 그룹에서 제외
-          'newlines-between': 'always', // 그룹 사이에 빈 줄 추가
+          'newlines-between': 'always-and-inside-groups', // 그룹 사이에 빈 줄 추가
           alphabetize: { order: 'asc', caseInsensitive: true }, // 알파벳 순 정렬
         },
       ],

@@ -25,8 +25,8 @@ export interface CardSwapProps {
   onCardClick?: (idx: number) => void;
   easing?: 'linear' | 'elastic';
   children: ReactNode;
-  minWidth?: number; // 컨테이너 최소 너비
-  minCardWidth?: number; // 카드 최소 너비
+  minWidth?: number;
+  minCardWidth?: number;
 }
 
 export interface CardSwapHandle {
@@ -47,24 +47,50 @@ interface Slot {
   zIndex: number;
 }
 
+import { useTheme } from 'next-themes';
+
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ customClass, children, ...rest }, ref) => (
-    <div
-      ref={ref}
-      {...rest}
-      className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(35,35,35,0.95)_0%,rgba(10,10,10,0.95)_100%)] shadow-[0_15px_35px_rgba(0,0,0,0.6)] backdrop-blur-md [will-change:transform] [backface-visibility:hidden] [transform-style:preserve-3d] ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
-    >
-      <div className="flex items-center gap-2 border-b border-white/10 bg-[rgba(255,255,255,0.04)] px-4 py-2">
-        <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
-        <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
-        <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
-        <p className="ml-3 text-sm font-medium text-gray-300">{rest['data-title'] ?? 'Window'}</p>
+  ({ customClass, children, ...rest }, ref) => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
+    return (
+      <div
+        ref={ref}
+        {...rest}
+        className={`absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-2xl border shadow-[0_15px_35px_rgba(0,0,0,0.6)] backdrop-blur-md [will-change:transform] [backface-visibility:hidden] [transform-style:preserve-3d] ${
+          isDark
+            ? 'border-white/10 bg-[linear-gradient(180deg,rgba(35,35,35,0.95)_0%,rgba(10,10,10,0.95)_100%)]'
+            : 'border-black/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.9)_0%,rgba(240,240,240,0.9)_100%)]'
+        } ${customClass ?? ''} ${rest.className ?? ''}`.trim()}
+      >
+        <div
+          className={`flex items-center gap-2 border-b px-4 py-2 transition-colors duration-300 ${
+            isDark
+              ? 'border-white/10 bg-[rgba(255,255,255,0.04)]'
+              : 'border-black/10 bg-[rgba(0,0,0,0.05)]'
+          }`}
+        >
+          <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
+          <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
+          <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
+          <p className={`ml-3 text-sm font-medium ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+            {rest['data-title'] ?? 'Window'}
+          </p>
+        </div>
+
+        <div
+          className={`flex flex-1 items-center justify-center ${
+            isDark
+              ? 'bg-gradient-to-b from-black/50 to-black/90'
+              : 'bg-gradient-to-b from-white/50 to-white/80'
+          }`}
+        >
+          {children}
+        </div>
       </div>
-      <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-black/50 to-black/90">
-        {children}
-      </div>
-    </div>
-  )
+    );
+  }
 );
 Card.displayName = 'Card';
 
@@ -112,7 +138,7 @@ const CardSwap = forwardRef<CardSwapHandle, CardSwapProps>(function CardSwap(
       else if (w >= 1024) scale = 0.9 + ((w - 1024) / 416) * 0.1;
       else if (w >= 768) scale = 0.85 + ((w - 768) / 256) * 0.05;
       else if (w >= 480) scale = 0.85;
-      else scale = 0.9; // ✅ 모바일 확대 유지
+      else scale = 0.9;
       setViewportScale(scale);
     };
     handleResize();
@@ -343,7 +369,7 @@ const CardSwap = forwardRef<CardSwapHandle, CardSwapProps>(function CardSwap(
       style: {
         width,
         height,
-        minWidth: minCardWidth, // ✅ 카드 크기 보정
+        minWidth: minCardWidth,
         maxWidth: 700,
         ...(child.props.style ?? {}),
       },
