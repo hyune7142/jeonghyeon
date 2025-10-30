@@ -18,7 +18,7 @@
 | **Framework**        | [Next.js 15](https://nextjs.org/)                                                |
 | **Language**         | [TypeScript](https://www.typescriptlang.org/)                                    |
 | **Library**          | [React 19](https://react.dev/)                                                   |
-| **Styling**          | [Tailwind CSS 4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
+| **Styling**          | [Tailwind CSS 4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) + [React Bits](https://reactbits.dev/)|
 | **Animation**        | [Motion (Framer Motion v12)](https://motion.dev/)                                |
 | **Theme**            | [next-themes](https://github.com/pacocoursey/next-themes)                        |
 | **State Management** | [Zustand 5](https://zustand-demo.pmnd.rs/)                                       |
