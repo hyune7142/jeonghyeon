@@ -53,6 +53,7 @@ import { P } from './Typography';
 interface SkillBoxProps {
   className?: string;
   name: SkillName;
+  size?: number;
 }
 
 const skillIconMap: Record<SkillName, React.ComponentType<{ className?: string }>> = {
@@ -99,18 +100,18 @@ const skillIconMap: Record<SkillName, React.ComponentType<{ className?: string }
   Confluence: ConfluenceIcon,
 };
 
-function SkillBox({ className, name }: SkillBoxProps) {
+function SkillBox({ className, name, size = 8 }: SkillBoxProps) {
   const Icon = skillIconMap[name];
-  if (!Icon) {
-    return null;
-  }
+  if (!Icon) return null;
+
+  const sizeClass = `h-${size} w-${size}`;
 
   return (
     <Tooltip delayDuration={200}>
       <TooltipTrigger asChild>
         <div
           className={cn(
-            'bg-muted flex aspect-square h-8 w-8 flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1 hover:border-blue-500 dark:hover:border-blue-500',
+            `bg-muted flex aspect-square flex-shrink-0 items-center justify-center rounded-md border border-gray-300 p-1 hover:border-blue-500 dark:hover:border-blue-500 ${sizeClass}`,
             className
           )}
         >

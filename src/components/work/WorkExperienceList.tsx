@@ -38,7 +38,7 @@ function WorkExperienceList() {
       startDate: '2022.10',
       endDate: '2024.05',
       keyTasks: [
-        '보안관제 통합 솔루션 EXD 프론트엔드 개발',
+        '보안관제 통합 솔루션 ExD 프론트엔드 개발',
         '보안관제 AI 솔루션 프론트엔드 개발 및 유지보수',
       ],
       skills: [

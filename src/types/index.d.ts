@@ -86,12 +86,6 @@ export type WorkExperience = {
 };
 
 // 프로젝트 상세
-export type Company = {
-  title: string;
-  content: string[];
-  logo: StaticImageData;
-};
-
 export interface ProjectInfo {
   name: string;
   desc: string;
@@ -105,3 +99,9 @@ export interface ProjectDetail extends ProjectInfo {
   details: string[];
   serviceLink?: string;
 }
+
+export type Company = {
+  title: string;
+  projects: ProjectDetail[];
+  logo: StaticImageData;
+};
